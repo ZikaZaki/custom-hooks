@@ -4,9 +4,14 @@ function UserForm() {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
 
+  const submitHandler = e => {
+    e.preventDefault()
+    console.log(firstName, lastName)
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={submitHandler}>
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
@@ -25,6 +30,7 @@ function UserForm() {
             onChange={e => setLastName(e.target.value)}
           />
         </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   )
