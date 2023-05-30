@@ -11,6 +11,8 @@ function useCounter() {
   const reset = () => {
     setCount(0)
   }
+
+  return [count, increment, decrement, reset]
 }
 
 export default useCounter
