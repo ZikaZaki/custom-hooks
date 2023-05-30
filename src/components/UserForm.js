@@ -1,12 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
+import useInput from "../hooks/useInput"
 
 function UserForm() {
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
+  const [firstName, bindFirstName, resetFirstName] = useInput("")
+  const [lastName, bindLastName, resetLastName] = useInput("")
 
   const submitHandler = e => {
     e.preventDefault()
     alert(`Hi, ${firstName} ${lastName}!`)
+    resetFirstName()
+    resetLastName()
   }
 
   return (
@@ -17,8 +20,7 @@ function UserForm() {
           <input
             type="text"
             name="firstName"
-            value={firstName}
-            onChange={e => setFirstName(e.target.value)}
+            {...bindFirstName}
           />
         </div>
         <div>
@@ -26,8 +28,7 @@ function UserForm() {
           <input
             type="text"
             name="lastName"
-            value={lastName}
-            onChange={e => setLastName(e.target.value)}
+            {...bindLastName}
           />
         </div>
         <button type="submit">Submit</button>
