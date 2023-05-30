@@ -6,7 +6,7 @@ function UserForm() {
 
   const submitHandler = e => {
     e.preventDefault()
-    console.log(`Hi, ${firstName} ${lastName}!`)
+    alert(`Hi, ${firstName} ${lastName}!`)
   }
 
   return (
