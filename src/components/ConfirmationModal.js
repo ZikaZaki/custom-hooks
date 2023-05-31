@@ -20,4 +20,4 @@ function ConfirmationModal({ isOpen, onClose }, ref) {
   )
 }
 
-export default ConfirmationModal
+export default React.forwardRef(ConfirmationModal)
