@@ -2,6 +2,7 @@ import React, { useImperativeHandle } from "react"
 
 function CustomInput({ style, ...props }, ref) {
   useImperativeHandle(ref, () => {
+    console.log("from useImperativeHandle", ref)
     return { alertHi: () => alert("Hi!") }
   }, [])
 
