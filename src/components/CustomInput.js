@@ -1,8 +1,9 @@
 import React from "react"
 
-function CustomInput({ style, ...props }) {
+function CustomInput({ style, ...props }, ref) {
   return (
     <input
+      ref={ref}
       {...props}
       style={{
         border: "none",
@@ -12,8 +13,9 @@ function CustomInput({ style, ...props }) {
         borderTopRightRadius: ".25em",
         borderTopLeftRadius: ".25em",
         ...style,
-      }} />
+      }}
+    />
   )
 }
 
-export default CustomInput
+export default React.forwardRef(CustomInput)
