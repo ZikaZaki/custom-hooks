@@ -1,4 +1,5 @@
 import React, { useRef } from "react"
+import Modal from "./Modal"
 
 function ParentContainer() {
   const modalRef = useRef()
@@ -12,6 +13,8 @@ function ParentContainer() {
   return (
     <div>
       <p>Parent Component</p>
+      <Modal ref={modalRef} />
+      <button onClick={handleOpenModal}>Open</button>
     </div>
   )
 }
