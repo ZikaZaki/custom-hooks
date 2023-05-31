@@ -14,6 +14,7 @@ function ParentContainer() {
       />
       <br />
       <button onClick={() => inputRef.current.focus()}>Focus</button>
+      <button onClick={() => inputRef.current.alertHi()}>Alert</button>
     </>
   )
 }
