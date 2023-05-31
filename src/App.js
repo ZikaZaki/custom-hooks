@@ -3,6 +3,7 @@ import CounterOne from "./components/CounterOne";
 import CounterTwo from "./components/CounterTwo";
 import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
+import ParentContainer from "./components/Modal/ParentContainer";
 import UserForm from "./components/UserForm";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <DocTitleTwo /> */}
       {/* <CounterOne />
       <CounterTwo /> */}
-      <UserForm />
+      {/* <UserForm /> */}
+      <ParentContainer />
     </div>
   );
 }
