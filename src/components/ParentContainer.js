@@ -1,20 +1,17 @@
 import React, { useState, useRef } from "react"
-import CustomInput from "./CustomInput"
+// import CustomInput from "./CustomInput"
 
 function ParentContainer() {
-  const [value, setValue] = useState("red")
-  const inputRef = useRef()
+  const [open, setOpen] = useState(false)
+  const modalRef = useRef()
 
   return (
     <>
-      <CustomInput
-        ref={inputRef}
-        value={value}
-        onChange={e => setValue(e.target.value)} 
-      />
-      <br />
-      <button onClick={() => inputRef.current.focus()}>Focus</button>
-      <button onClick={() => inputRef.current.alertHi()}>Alert</button>
+      <button onClick={() => setOpen(true)}>Open</button>
+      <button>Focus Close</button>
+      <button>Focus Confirm</button>
+      <button>Focus Deny</button>
+
     </>
   )
 }
