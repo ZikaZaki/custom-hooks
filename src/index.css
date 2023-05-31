@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
   min-height: 100vh;
   font-family: 'Roboto', 'Oxygen',
@@ -45,10 +45,15 @@ button {
 
 input {
   font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.5em;
-  margin-bottom: 1rem;
+  /* padding: 0.25rem; */
+  /* border-radius: 0.5em; */
+  /* margin-bottom: 0.10rem; */
   outline: none;
+}
+
+input:focus {
+  outline: .1em solid black;
+  border-radius: 0.25em;
 }
 
 p { text-align: center }
