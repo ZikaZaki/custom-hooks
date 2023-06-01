@@ -9,9 +9,9 @@ function ParentContainer() {
   return (
     <>
       <button onClick={() => setOpen(true)}>Open</button>
-      <button>Focus Close</button>
-      <button>Focus Confirm</button>
-      <button>Focus Deny</button>
+      <button onClick={() => modalRef.current.focusCloseBtn()}>Focus Close</button>
+      <button onClick={() => modalRef.current.focusConfirmBtn()}>Focus Confirm</button>
+      <button onClick={() => modalRef.current.focusDenyBtn()}>Focus Deny</button>
       <ConfirmationModal
         ref={modalRef}
         isOpen={open}
