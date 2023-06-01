@@ -54,7 +54,7 @@ body {
   height: .75rem;
 }
 
-.close-btn:hover {
+.close-btn:hover, :focus {
   color: black;
   border: 2px solid black;
 }
@@ -92,7 +92,9 @@ body {
   padding: 2px;
 }
 
-.confirm-btn:hover {
+
+
+.confirm-btn:hover, :focus {
   color: black;
   border: 3px solid black;
 }
@@ -107,7 +109,7 @@ body {
   padding: 2px;
 }
 
-.deny-btn:hover {
+.deny-btn:hover, :focus {
   color: black;
   border: 3px solid black;
 }
