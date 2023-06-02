@@ -1,6 +1,8 @@
-import React, { useState, useReducer } from "react"
+import React, { useState, useReducer, useEffect } from "react"
+import axios from "axios"
+import Post from "./Post"
 
-const initialSatate = {
+const initialState = {
     posts: [],
     loading: true,
     error: ""
@@ -27,9 +29,27 @@ const reducer = (state, action) => {
 }
 
 function PostsList() {
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/posts")
+      .then(response => {
+        dispatch({ type: "FETCH_POSTS_SUCCESS", payload: response.data })
+    })
+    .catch(error => {
+        dispatch({ type: "FETCH_POSTS_FAILURE", payload: error.message })
+    })
+  }, [])
   
   return (
-    <div>PostsList</div>
+    <div>
+        <h2>Posts List</h2>
+        {state.loading && <p>Loading...</p>}
+        {state.error && <p>{state.error}</p>}
+        {state.posts && state.posts.map(post => (
+            <Post key={post.id} post={post} />
+        ))}
+    </div>
   )
 }
 
