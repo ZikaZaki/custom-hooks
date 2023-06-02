@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react"
+import React, { useReducer, useRef, useEffect } from "react"
 import axios from "axios"
 import Post from "./Post"
 
@@ -30,6 +30,7 @@ const reducer = (state, action) => {
 
 function PostsList() {
   const [state, dispatch] = useReducer(reducer, initialState)
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -42,7 +43,7 @@ function PostsList() {
   }, [])
   
   return (
-    <div>
+    <div className="posts-container">
         <h2>Posts List</h2>
         <br />
         {state.loading && <p>Loading...</p>}
