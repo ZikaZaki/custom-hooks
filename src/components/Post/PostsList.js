@@ -1,6 +1,23 @@
 import React, { useReducer, useRef, useEffect, useLayoutEffect } from "react"
 import axios from "axios"
 import Post from "./Post"
+/**-------------------------------------useLayoutEffect Hook-----------------------------------------
+ * useLayoutEffect hook is similar to useEffect hook, but it runs synchronously after all DOM mutations.
+ * That means it runs before the browser updates the DOM.
+ * Here's the execution order for the example below:
+ * 1- API request comes in 
+ * 2- State is updated
+ * 3- React renders the component
+ * 4- useLayoutEffect hook runs
+ * 6- Browser updates the DOM
+ * ---------------------------------------------------------------------------------------------------
+ * USE CASES:
+ * - DOM measurements
+ * - DOM mutations
+ * - Layout calculations
+ * - Painting
+ * ---------------------------------------------------------------------------------------------------
+ */
 
 const initialState = {
     posts: [],
@@ -47,20 +64,20 @@ function PostsList() {
     ref.current.scrollTop = ref.current.scrollHeight;
   }, [state.posts.length])
 
-  useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/posts")
-      .then(response => {
-        dispatch({ type: "FETCH_POSTS_SUCCESS", payload: response.data })
-    })
-    .catch(error => {
-        dispatch({ type: "FETCH_POSTS_FAILURE", payload: error.message })
-    })
+//   useEffect(() => {
+//     axios.get("https://jsonplaceholder.typicode.com/posts")
+//       .then(response => {
+//         dispatch({ type: "FETCH_POSTS_SUCCESS", payload: response.data })
+//     })
+//     .catch(error => {
+//         dispatch({ type: "FETCH_POSTS_FAILURE", payload: error.message })
+//     })
 
-    console.log("useEffect hook", state.posts.length)
+//     console.log("useEffect hook", state.posts.length)
 
-    if (!ref.current) return;
-    ref.current.scrollTop = ref.current.scrollHeight;
-  }, [state.posts.length])
+//     if (!ref.current) return;
+//     ref.current.scrollTop = ref.current.scrollHeight;
+//   }, [state.posts.length])
   
   return (
     <div className="posts-container">
