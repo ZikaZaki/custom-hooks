@@ -49,6 +49,7 @@ function PostsList() {
         {state.posts && state.posts.map(post => (
             <Post key={post.id} post={post} />
         ))}
+        <hr />
     </div>
   )
 }
