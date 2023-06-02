@@ -3,9 +3,9 @@ import React from "react"
 function Post({ post }) {
 
   return (
-    <div>
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
+    <div className="post">
+        <h3 className="post-title">{post.title}</h3>
+        <p className="post-body">{post.body}</p>
     </div>
   )
 }
