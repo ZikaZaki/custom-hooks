@@ -30,7 +30,7 @@ const reducer = (state, action) => {
 
 function PostsList() {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null)
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -40,7 +40,12 @@ function PostsList() {
     .catch(error => {
         dispatch({ type: "FETCH_POSTS_FAILURE", payload: error.message })
     })
-  }, [])
+
+    console.log("useEffect hook", state.posts.length)
+
+    if (!ref.current) return;
+    ref.current.scrollTop = ref.current.scrollHeight;
+  }, [state.posts.length])
   
   return (
     <div className="posts-container">
@@ -48,7 +53,7 @@ function PostsList() {
         <br />
         {state.loading && <p>Loading...</p>}
         {state.error && <p>{state.error}</p>}
-        <div className="posts-list">
+        <div className="posts-list" ref={ref}>
             {state.posts && state.posts.map(post => (
                 <Post key={post.id} post={post} />
             ))}
