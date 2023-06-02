@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from "react"
+import React, { useReducer, useEffect } from "react"
 import axios from "axios"
 import Post from "./Post"
 
