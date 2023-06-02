@@ -44,12 +44,14 @@ function PostsList() {
   return (
     <div>
         <h2>Posts List</h2>
+        <br />
         {state.loading && <p>Loading...</p>}
         {state.error && <p>{state.error}</p>}
-        {state.posts && state.posts.map(post => (
-            <Post key={post.id} post={post} />
-        ))}
-        <hr />
+        <div className="posts-list">
+            {state.posts && state.posts.map(post => (
+                <Post key={post.id} post={post} />
+            ))}
+        </div> 
     </div>
   )
 }
