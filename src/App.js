@@ -5,6 +5,7 @@ import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
 // import ParentContainer from "./components/Modal/ParentContainer";
 import ParentContainer from "./components/ParentContainer";
+import PostsList from "./components/Post/PostsList";
 import UserForm from "./components/UserForm";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <CounterTwo /> */}
       {/* <UserForm /> */}
       {/* <ParentContainer /> */}
-      <ParentContainer />
+      {/* <ParentContainer /> */}
+      <PostsList />
     </div>
   );
 }
