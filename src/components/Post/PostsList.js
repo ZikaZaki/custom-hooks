@@ -1,4 +1,4 @@
-import React, { useReducer, useRef, useEffect } from "react"
+import React, { useReducer, useRef, useEffect, useLayoutEffect } from "react"
 import axios from "axios"
 import Post from "./Post"
 
@@ -31,6 +31,21 @@ const reducer = (state, action) => {
 function PostsList() {
   const [state, dispatch] = useReducer(reducer, initialState)
   const ref = useRef(null)
+
+  useLayoutEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/posts")
+      .then(response => {
+        dispatch({ type: "FETCH_POSTS_SUCCESS", payload: response.data })
+      })
+      .catch(error => {
+        dispatch({ type: "FETCH_POSTS_FAILURE", payload: error.message })
+      })
+
+    console.log("useLayoutEffect hook", state.posts.length)
+    
+    if (!ref.current) return;
+    ref.current.scrollTop = ref.current.scrollHeight;
+  }, [state.posts.length])
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts")
