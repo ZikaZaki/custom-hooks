@@ -10,7 +10,7 @@ html {
 
 body {
   /* background-color: #000; */
-  color: #fff;
+  /* color: #fff; */
   min-height: 100vh;
   font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -112,4 +112,43 @@ body {
 .deny-btn:hover, :focus {
   color: black;
   border: 3px solid black;
+}
+/* ------------------------------------------------------------------- */
+.posts-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: beige;
+  width: 12rem;
+  height: 7rem;
+  max-width: 18rem;
+  max-height: 10rem;
+  padding: 1rem;
+}
+
+.post-title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.post-body {
+  font-size: x-large;
+  font-weight: 300;
+  overflow: hidden;
+  word-break: break-all;
+  text-align: justify;
 }
