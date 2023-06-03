@@ -1,6 +1,8 @@
 import React, { useImperativeHandle, useRef } from "react"
 /**
- * useImperativeHandle Hook
+ * useImperativeHandle Hook 
+ * USE CASES:
+ * - 
  */
 
 function ConfirmationModal({ isOpen, onClose }, ref) {
