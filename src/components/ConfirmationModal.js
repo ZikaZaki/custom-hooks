@@ -1,4 +1,7 @@
 import React, { useImperativeHandle, useRef } from "react"
+/**
+ * useImperativeHandle Hook
+ */
 
 function ConfirmationModal({ isOpen, onClose }, ref) {
   const closeRef = useRef()
