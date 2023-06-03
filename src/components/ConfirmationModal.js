@@ -7,6 +7,7 @@ import React, { useImperativeHandle, useRef } from "react"
  * -  trigger animations
  * -  integrate with third-party DOM libraries
  * -  expose imperative API to parent components
+ * -  etc.
  */
 
 function ConfirmationModal({ isOpen, onClose }, ref) {
