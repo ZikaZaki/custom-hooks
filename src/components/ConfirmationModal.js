@@ -1,8 +1,12 @@
 import React, { useImperativeHandle, useRef } from "react"
 /**
- * useImperativeHandle Hook 
+ * useImperativeHandle Hook allows you to expose certain functions to parent components
+ * ref is passed as second argument to forwardRef function (see below) and is used to access the functions
  * USE CASES:
- * - 
+ * -  focus on a certain element
+ * -  trigger animations
+ * -  integrate with third-party DOM libraries
+ * -  expose imperative API to parent components
  */
 
 function ConfirmationModal({ isOpen, onClose }, ref) {
