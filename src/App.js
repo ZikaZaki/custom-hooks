@@ -6,16 +6,10 @@ import DocTitleTwo from "./components/DocTitleTwo";
 // import ParentContainer from "./components/Modal/ParentContainer";
 import ParentContainer from "./components/ParentContainer";
 import PostsList from "./components/Post/PostsList";
+import Test from "./components/Test";
 import UserForm from "./components/UserForm";
-import React, { useState } from "react";
-import { Person, usePersonProps } from "./components/Person";
+
 function App() {
-  const [count, setCount] = useState(0);
-  const inc = () => setCount(count + 1);
-  const dec = () => setCount(count - 1);
-
-  const personProps = usePersonProps();
-
   return (
     <div className="App">
       {/* <DocTitleOne />
@@ -26,13 +20,7 @@ function App() {
       {/* <ParentContainer /> */}
       {/* <ParentContainer /> */}
       {/* <PostsList /> */}
-      <div>Count: {count}</div>
-      <div>
-        <button onClick={inc}>+</button>
-        <button onCanPlay={dec}>-</button>
-      </div>
-      
-      <Person {...personProps} />
+      <Test />
     </div>
   );
 }
