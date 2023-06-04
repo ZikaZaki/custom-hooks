@@ -6,6 +6,7 @@ import DocTitleTwo from "./components/DocTitleTwo";
 // import ParentContainer from "./components/Modal/ParentContainer";
 import ParentContainer from "./components/ParentContainer";
 import PostsList from "./components/Post/PostsList";
+import StorageComponent from "./components/StorageComponent";
 import Test from "./components/Test";
 import UserForm from "./components/UserForm";
 
@@ -20,7 +21,8 @@ function App() {
       {/* <ParentContainer /> */}
       {/* <ParentContainer /> */}
       {/* <PostsList /> */}
-      <Test />
+      {/* <Test /> */}
+      <StorageComponent />
     </div>
   );
 }
