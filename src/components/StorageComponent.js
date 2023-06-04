@@ -6,7 +6,7 @@ export default function StorageComponent() {
 
   return (
     <div>
-        <div>name: {name} | age: {age}</div>
+        <div>name: {name} - age: {age}</div>
         <button onClick={() => setName("Zack")}>Set Name</button>
         <button onClick={() => setAge("28")}>Set Age</button>
         <button onClick={removeName}>Remove Name</button>
