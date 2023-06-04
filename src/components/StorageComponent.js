@@ -1,4 +1,3 @@
-import React from "react"
 import { useSessionStorage, useLocalStorage } from "../hooks/useStorage"
 
 export default function StorageComponent() {
