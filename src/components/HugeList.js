@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useTransition } from "react"
 /**
  * useTransition hook is used to manage the state of a component that is changing frequently.
  * It allows us to defer the rendering of a component until the state is stable.
@@ -17,6 +17,11 @@ import React, { useState } from "react"
  * We have a text input field that is used to filter the list.
  * We are using the useTransition hook to defer the rendering of the list until the state is stable.
  * We are also using the useTransition hook to defer the rendering of the input field until the state is stable.
+ * ------------------------------------------------------------------------------------------------
+ * NOTE: In a class component, we can use the unstable_deferredUpdates method to defer the rendering of a component.
+ * NOTE: In a class component, we can use the useDeferredValue method to defer the rendering of a component.
+ * NOTE: In a functional component, we use the useTransition hook, on the other hand, in a class component,
+ * we use the startTransition method.
  * ------------------------------------------------------------------------------------------------
  */
 
