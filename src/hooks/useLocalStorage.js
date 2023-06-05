@@ -32,7 +32,6 @@ export function useLocalStorage(key, initialValue) {
     useDebugValue(value, v => getValueSlowly(v))
 
     useEffect(() => {
-
         if (value === undefined) return localStorage.removeItem(key)
         localStorage.setItem(key, JSON.stringify(value))
     }, [key, value, localStorage ])
