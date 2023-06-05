@@ -3,6 +3,7 @@ import CounterOne from "./components/CounterOne";
 import CounterTwo from "./components/CounterTwo";
 import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
+import HugeList from "./components/HugeList";
 import LocalStorageComp from "./components/LocalStorageComp";
 // import ParentContainer from "./components/Modal/ParentContainer";
 import ParentContainer from "./components/ParentContainer";
@@ -25,6 +26,7 @@ function App() {
       {/* <Test /> */}
       {/* <StorageComponent /> */}
       {/* <LocalStorageComp /> */}
+      <HugeList />
     </div>
   );
 }
