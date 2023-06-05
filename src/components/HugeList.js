@@ -1,4 +1,24 @@
 import React, { useState } from "react"
+/**
+ * useTransition hook is used to manage the state of a component that is changing frequently.
+ * It allows us to defer the rendering of a component until the state is stable.
+ * It takes two arguments:
+ *  1. the state that is changing frequently and needs to be deferred.
+ *  2. the config object that has a timeout property.
+ * It returns an array with two elements:
+ *  1. the state that is changing frequently.
+ *  2. a function to set the state.
+ * ------------------------------------------------------------------------------------------------
+ * USE CASES:
+ * 1. When we have a huge list of items and we want to render them on the screen.
+ * 2. When we have a form with a lot of input fields and we want to render them on the screen.
+ * ------------------------------------------------------------------------------------------------
+ * In the following example, we have a huge list of items and we want to render them on the screen.
+ * We have a text input field that is used to filter the list.
+ * We are using the useTransition hook to defer the rendering of the list until the state is stable.
+ * We are also using the useTransition hook to defer the rendering of the input field until the state is stable.
+ * ------------------------------------------------------------------------------------------------
+ */
 
 const LIST_LENGTH = 20000
 
