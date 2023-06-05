@@ -3,6 +3,7 @@ import CounterOne from "./components/CounterOne";
 import CounterTwo from "./components/CounterTwo";
 import DocTitleOne from "./components/DocTitleOne";
 import DocTitleTwo from "./components/DocTitleTwo";
+import LocalStorageComp from "./components/LocalStorageComp";
 // import ParentContainer from "./components/Modal/ParentContainer";
 import ParentContainer from "./components/ParentContainer";
 import PostsList from "./components/Post/PostsList";
@@ -22,7 +23,8 @@ function App() {
       {/* <ParentContainer /> */}
       {/* <PostsList /> */}
       {/* <Test /> */}
-      <StorageComponent />
+      {/* <StorageComponent /> */}
+      <LocalStorageComp />
     </div>
   );
 }
