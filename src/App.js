@@ -24,7 +24,7 @@ function App() {
       {/* <PostsList /> */}
       {/* <Test /> */}
       {/* <StorageComponent /> */}
-      <LocalStorageComp />
+      {/* <LocalStorageComp /> */}
     </div>
   );
 }
