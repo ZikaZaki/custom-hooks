@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useLocalStorage } from "../hooks/useStorage"
+import { useLocalStorage } from "../hooks/useLocalStorage"
 
 export default function LocalStorageComp() {
   const [firstName, setFirstName] = useLocalStorage("firstName", "ZikaZaki")
