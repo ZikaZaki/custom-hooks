@@ -1,8 +1,9 @@
+import { useState } from "react"
 import { useLocalStorage } from "../hooks/useStorage"
 
 export default function LocalStorageComp() {
-  const [firstName, setFirstName, removeFirstName] = useLocalStorage("firstName", function() {return "ZikaZaki"})
-  const [lastName, setLastName, removeLastName] = useLocalStorage("lastName", "Ali")
+  const [firstName, setFirstName] = useLocalStorage("firstName", "ZikaZaki")
+  const [lastName, setLastName] = useState("Ali")
 
   return (
     <div>
