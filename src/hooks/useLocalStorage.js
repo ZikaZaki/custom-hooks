@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useDebugValue } from "react"
 
 export function useLocalStorage(key, initialValue) {
     const [value, setValue] = useState(() => {
@@ -11,6 +11,8 @@ export function useLocalStorage(key, initialValue) {
             return initialValue
         }
     })
+
+    useDebugValue(value)
 
     useEffect(() => {
 
