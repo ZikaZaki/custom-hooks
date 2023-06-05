@@ -1,16 +1,16 @@
 import { useLocalStorage } from "../hooks/useStorage"
 
 export default function LocalStorageComp() {
-  const [name, setName, removeName] = useSessionStorage("name", function() {return "Zack Ali"})
-  const [age, setAge, removeAge] = useLocalStorage("age", "24")
+  const [firstName, setFirstName, removeFirstName] = useLocalStorage("firstName", function() {return "ZikaZaki"})
+  const [lastName, setLastName, removeLastName] = useLocalStorage("lastName", "Ali")
 
   return (
     <div>
-        <div>name: {name} - age: {age}</div>
-        <button onClick={() => setName("Zack")}>Set Name</button>
-        <button onClick={removeName}>Remove Name</button>
-        <button onClick={() => setAge("28")}>Set Age</button>
-        <button onClick={removeAge}>Remove Age</button>
+        First Name:{" "}
+        <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)} />
+        <br />
+        Last Name:{" "}
+        <input type="text" value={lastName} onChange={e => setLastName(e.target.value)} />
     </div>
   )
 }
