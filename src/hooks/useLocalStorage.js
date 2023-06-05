@@ -16,7 +16,8 @@ export function useLocalStorage(key, initialValue) {
         }
     })
 
-    useDebugValue([key, value]) // Can be useful only inside custom-hooks
+    // Visible only when used as a label inside custom-hooks.
+    useDebugValue([key, value])
 
     useEffect(() => {
 
