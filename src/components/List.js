@@ -12,7 +12,6 @@ import { useMemo, useDeferredValue, useEffect } from "react"
  *    the next render.
  * --------------------------------------------------------------------------------------------------------------
  */
-
 function List({ input }) {
   const LIST_LENGTH = 20000
   const deferredInput = useDeferredValue(input)
