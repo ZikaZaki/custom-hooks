@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import List from "./List"
 
 function ListContainer() {
   const [input, setInput] = useState("")
@@ -10,7 +11,7 @@ function ListContainer() {
   return (
     <div>
         <input type="text" value={input} onChange={handleChange} />
-        
+        <List input={input} />
     </div>
   )
 }
