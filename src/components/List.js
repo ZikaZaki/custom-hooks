@@ -1,4 +1,4 @@
-import { useMemo, useDeferredValue } from "react"
+import { useMemo, useDeferredValue, useEffect } from "react"
 
 function List({ input }) {
   const LIST_LENGTH = 20000
@@ -10,6 +10,10 @@ function List({ input }) {
     }
     return l
   }, [deferredInput])
+
+  useEffect(() => {
+    console.log(`Input: ${input}\nDeferredInput: ${deferredInput}`)
+  }, [input, deferredInput])
 
   return list
 }
