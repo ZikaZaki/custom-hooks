@@ -45,13 +45,15 @@ function HugeList() {
     })
   }
 
-
   return (
     <div>
         <input type="text" value={input} onChange={handleInputChange} />
-        {isPending ? list && list.map((item, index) => {
-            return <div key={index}>{item}</div>
-        }) : null}
+        {isPending 
+           ? <div>Loading...</div>
+           : list && list.map((item, index) => {
+                return <div key={index}>{item}</div>
+            })
+        }
     </div>
   )
 }
