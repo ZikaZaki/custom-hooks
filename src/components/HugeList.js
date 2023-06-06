@@ -49,8 +49,8 @@ function HugeList() {
     <div>
         <input type="text" value={input} onChange={handleInputChange} />
         {isPending 
-           ? <div>Loading...</div>
-           : list && list.map((item, index) => {
+           ? "Loading..."
+           : list.map((item, index) => {
                 return <div key={index}>{item}</div>
             })
         }
