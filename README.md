@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+## Custom-Hooks
+> This Custom-Hooks 学习笔记 web application is part of a **React Advanced Tutorial**. The main purpose of this tutorial is to discuss **React Hooks** in details and give students a comprehensive and practical on how to leverage them while building web application with **React** library. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Built With ⚙️
 
-## Available Scripts
+- **Major languages**: HTML, CSS, & JavaScript.
+- **Frameworks**: React & React-Hooks.
+- **Linters**: Lighthouse, Webhint, Stylelint & ESLint.
+- **Technologies used**: Yarn, Webpack, & Jest Library.
+- **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
 
-In the project directory, you can run:
+## Live Demo (Deployed On Netlify) 🚀
 
-### `yarn start`
+[![Netlify Status](https://api.netlify.com/)](https://api.netlify.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Live Demo Link](https://api.netlify.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `yarn test`
+To get a local copy up and running follow these simple example steps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `yarn build`
+- [x] Basic Knowledge of **HTML**, **CSS**, & **JavaScript**.
+- [x] Basic knowledge of **React** fundamentals.
+- [x] Basic knowledge of **React-Hooks** fundamentals.
+- [x] Basic knowledge of **ES6** syntax.
+- [x] Basic knowledge of **Git** & **GitHub**.
+- [x] Basic knowledge of **Linters**.
+- [x] Basic knowledge of **Webpack**.
+- [x] Basic knowledge of **Jest** unit-testing library.
+- [x] Basic knowledge of **VS Code** or any other code-editors.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Create a new **projects** directory and move into it.
+- Open the **Command Prompt (CMD)** in the current directory (projects directory).
+- Run the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ git clone https://github.com/ZikaZaki/react-hooks.git
+```
 
-### `yarn eject`
+- Once finished you should see a new folder called **react-hooks** in your current (projects) directory.
+- Start customizing the project so it fits your personal preferences and needs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Install Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Using **npm** package manager:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+$ npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Using **yarn** package manager:
 
-## Learn More
+```bash
+$ yarn add
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+We used the **Jest & React-testing** libraries for testing the project.
 
-### Code Splitting
+```
+$ npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+👤 **Zakariya Al-Khamisi ([ZikaZaki](https://github.com/ZikaZaki))**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- GitHub: [ZikaZaki](https://github.com/ZikaZaki)
+- LinkedIn: [ZikaZaki](https://www.linkedin.com/in/zikazaki/)
+- Twitter: [Zakariya Al-Khamisi](https://twitter.com/ZakariyaKhamisi)
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions, issues, and feature requests are welcome!
 
-### Deployment
+Feel free to check the [issues page](../../issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgments
 
-### `yarn build` fails to minify
+- Code Reviewers & Coding Partners
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
