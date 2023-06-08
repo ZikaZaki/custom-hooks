@@ -1,5 +1,5 @@
 ## Custom-Hooks
-> This Custom-Hooks 学习笔记 web application is part of a **React Advanced Tutorial**. The main purpose of this tutorial is to discuss **React Hooks** in details and give students a comprehensive and practical on how to leverage them while building web application with **React** library. 
+> This Custom-Hooks web application is part of a **React Advanced Tutorial**. The main purpose of this tutorial is to discuss **React Hooks** in details and give students a comprehensive and practical on how to leverage them while building web application with **React** library. 
 
 ## Built With ⚙️
 
