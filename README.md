@@ -38,7 +38,7 @@ To get a local copy up and running follow these simple example steps.
 - Run the following command:
 
 ```
-$ git clone https://github.com/ZikaZaki/react-hooks.git
+$ git clone https://github.com/ZikaZaki/custom-hooks.git
 ```
 
 - Once finished you should see a new folder called **react-hooks** in your current (projects) directory.
