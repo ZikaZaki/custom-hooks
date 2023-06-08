@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple example steps.
 $ git clone https://github.com/ZikaZaki/custom-hooks.git
 ```
 
-- Once finished you should see a new folder called **react-hooks** in your current (projects) directory.
+- Once finished you should see a new folder called **custom-hooks** in your current (projects) directory.
 - Start customizing the project so it fits your personal preferences and needs.
 
 ### Install Dependencies
