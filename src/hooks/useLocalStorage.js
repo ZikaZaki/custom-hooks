@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useDebugValue } from "react"
+import { useState, useEffect, useCallback, useDebugValue } from "react";
 /**
  * --------------------------------------------------------------------------------------------------------
  * useDebugValue is useful for debugging purposes. It displays a label for custom hooks in React DevTools.
@@ -16,34 +16,34 @@ import { useState, useEffect, useCallback, useDebugValue } from "react"
  */
 export function useLocalStorage(key, initialValue) {
     const [value, setValue] = useState(() => {
-        const jsonValue = localStorage.getItem(key)
-        if (jsonValue != null) return JSON.parse(jsonValue)
+        const jsonValue = localStorage.getItem(key);
+        if (jsonValue != null) return JSON.parse(jsonValue);
 
         if (typeof initialValue === "function") {
-            return initialValue()
+            return initialValue();
         } else {
-            return initialValue
+            return initialValue;
         }
-    })
+    });
 
     // Visible only when used as a label inside custom-hooks.
-    useDebugValue("hi ZikaZaki")
-    useDebugValue({ key, value })
-    useDebugValue(value, v => getValueSlowly(v))
+    useDebugValue("hi ZikaZaki");
+    useDebugValue({ key, value });
+    useDebugValue(value, v => getValueSlowly(v));
 
     useEffect(() => {
-        if (value === undefined) return localStorage.removeItem(key)
-        localStorage.setItem(key, JSON.stringify(value))
-    }, [key, value, localStorage ])
+        if (value === undefined) return localStorage.removeItem(key);
+        localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value, localStorage ]);
 
     const remove = useCallback(() => {
-        setValue(undefined)
-    }, [])
+        setValue(undefined);
+    }, []);
 
-    return [value, setValue, remove]
+    return [value, setValue, remove];
 }
 
 function getValueSlowly(value) {
     for (let i = 0; i < 1000000000; i++) { }
-    return value
+    return value;
 }
