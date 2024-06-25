@@ -1,33 +1,33 @@
-import { useCallback, useState, useEffect }from "react"
+import { useCallback, useState, useEffect }from "react";
 
 export function useLocalStorage(key, initialValue) {
-    return useStorage(key, initialValue, window.localStorage)
+    return useStorage(key, initialValue, window.localStorage);
 }
 
 export function useSessionStorage(key, initialValue) {
-    return useStorage(key, initialValue, window.sessionStorage)
+    return useStorage(key, initialValue, window.sessionStorage);
 }
 
 function useStorage(key, initialValue, storageObject) {
   const [value, setValue] = useState(() => {
-    const jsonValue = storageObject.getItem(key)
-    if (jsonValue != null) return JSON.parse(jsonValue)
+    const jsonValue = storageObject.getItem(key);
+    if (jsonValue != null) return JSON.parse(jsonValue);
 
     if (typeof initialValue === "function") {
-        return initialValue()
+        return initialValue();
     } else {
-        return initialValue
+        return initialValue;
     }
-  })
+  });
 
   useEffect(() => {
-    if (value === undefined) return storageObject.removeItem(key)
-    storageObject.setItem(key, JSON.stringify(value))
-  }, [key, value, storageObject])
+    if (value === undefined) return storageObject.removeItem(key);
+    storageObject.setItem(key, JSON.stringify(value));
+  }, [key, value, storageObject]);
 
   const remove = useCallback(() => {
-    setValue(undefined)
-  }, [])
+    setValue(undefined);
+  }, []);
 
-  return [value, setValue, remove]
+  return [value, setValue, remove];
 }
